@@ -1,0 +1,14 @@
+{"time":"2026-11-05T07:32:28.4445039Z","level":"INFO","msg":"initialized database","db":"sqlite","mode":"memory"}
+{"time":"2026-11-05T07:32:28.4526386Z","level":"INFO","msg":"ran database migrations","db":"sqlite","mode":"memory"}
+{"time":"2026-11-05T07:32:28.4826235Z","level":"INFO","msg":"starting executor grpc server","svc":"executor","addr":":50163"}
+{"time":"2026-11-05T07:32:28.5038557Z","level":"INFO","msg":"service starting","caller":"api","service":"api"}
+{"time":"2026-11-05T07:32:28.5038557Z","level":"INFO","msg":"service starting","caller":"lease-scavenger","service":"lease-scavenger"}
+{"time":"2026-11-05T07:32:28.5038557Z","level":"INFO","msg":"service starting","caller":"devserver","service":"devserver"}
+{"time":"2026-11-05T07:32:28.5038557Z","level":"INFO","msg":"service starting","caller":"executor","service":"executor"}
+{"time":"2026-11-05T07:32:28.5074551Z","level":"INFO","msg":"starting server","caller":"api","addr":"0.0.0.0:8386"}
+{"time":"2026-11-05T07:32:28.5038557Z","level":"INFO","msg":"starting event stream","backend":"redis"}
+{"time":"2026-11-05T07:32:28.5074551Z","level":"INFO","msg":"subscribing to function queue"}
+{"time":"2026-11-05T07:32:28.5074551Z","level":"INFO","msg":"service starting","caller":"runner","service":"runner"}
+{"time":"2026-11-05T07:32:28.5093522Z","level":"INFO","msg":"Executor started in assignedQueueShard Mode","queue_shard":"default"}
+{"time":"2026-11-05T07:32:28.5133641Z","level":"INFO","msg":"service starting","caller":"connect-gateway","service":"connect-gateway"}
+{"time":"2026-11-05T07:32:28.5312901Z","level":"INFO","msg":"subscribing to events","topic":"events"}
