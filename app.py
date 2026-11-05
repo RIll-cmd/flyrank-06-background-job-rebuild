@@ -6,7 +6,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 app = FastAPI(title='Background report jobs rebuild')
-client = inngest.Inngest(app_id='report-api', is_production=False, api_base_url='http://localhost:8386', event_api_base_url='http://localhost:8386')
+client = inngest.Inngest(app_id='report-api', is_production=False, api_base_url='http://127.0.0.1:8386', event_api_base_url='http://127.0.0.1:8386')
 
 reports = {}
 

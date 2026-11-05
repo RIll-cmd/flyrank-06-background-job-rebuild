@@ -62,3 +62,6 @@ Heartbeat at 2026-11-05T07:39:00.027471+00:00: {'pending': 0, 'done': 0, 'failed
 Heartbeat at 2026-11-05T07:40:00.032986+00:00: {'pending': 0, 'done': 0, 'failed': 0}
 ```
 Observed interval 60.005515 seconds. Each summary counts pending/done/failed. Daily 08:00 UTC: `0 8 * * *`; Sunday 22:00 UTC: `0 22 * * 0`. Dashboard confirmed completed heartbeat runs.
+
+## Stage 5
+Completed the full README endpoint/function/run-command tables, pasted 202/pending/done proof, three-attempt retry explanation, cron examples and screenshots. A fresh local development server and API were started after the interrupted tool run. A cold SDK call using localhost took 2.714 seconds; replacing both SDK loopback URLs with 127.0.0.1 made the first call after API restart return 202 in 0.009 seconds. New completed-run screenshot shows actual sleep and build steps. All four regression tests pass. Generated logs are now ignored and untracked; earlier stage logs remain honestly in history. No credentials are present in these local development logs.
