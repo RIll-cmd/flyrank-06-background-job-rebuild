@@ -10,17 +10,26 @@ client = inngest.Inngest(app_id='report-api', is_production=False, api_base_url=
 
 reports = {}
 
+async def report_failed(ctx: inngest.Context):
+    original=ctx.event.data.get('event',{}).get('data',{})
+    report_id=original.get('id')
+    if report_id:
+        reports[report_id]={'id':report_id,'status':'failed','error':'Report failed after three attempts'}
+    print(f'FINAL FAILURE report_id={report_id}',flush=True)
+
 @client.create_function(fn_id='say-hello', trigger=inngest.TriggerEvent(event='test/hello'))
 async def say_hello(ctx: inngest.Context):
     await ctx.step.sleep('wait', datetime.timedelta(seconds=5))
     return 'Hello from the background!'
 
-@client.create_function(fn_id='make-report', trigger=inngest.TriggerEvent(event='report/requested'))
+@client.create_function(fn_id='make-report', trigger=inngest.TriggerEvent(event='report/requested'), retries=2, on_failure=report_failed)
 async def make_report(ctx: inngest.Context):
     item = ctx.event.data
     await ctx.step.sleep('wait-for-report', datetime.timedelta(seconds=8))
     def build():
         print(f'BUILD report_id={item["id"]} attempt={ctx.attempt+1}',flush=True)
+        if item['topic'] == 'fail':
+            raise RuntimeError('Intentional failure for retry exercise')
         result = f"Report about {item['topic']}"
         reports[item['id']] = {'id': item['id'], 'status': 'done', 'result': result}
         return result

@@ -33,3 +33,24 @@ Restarted API and synchronized Inngest. POST http://127.0.0.1:8106/reports topic
   "unknown_status": 404
 }
 ```
+
+## Stage 3
+Live POST topic fail, then GET status; missing topic POST returned 400. SDK retries=2 gives three total attempts. Real logs:
+```json
+{
+  "observed_at": "2026-11-05T07:37:25.067889+00:00",
+  "failed_poll": {
+    "id": "4f534c39-457b-4f66-8311-e167eb223333",
+    "status": "failed",
+    "error": "Report failed after three attempts"
+  },
+  "attempt_log": [
+    "BUILD report_id=4f534c39-457b-4f66-8311-e167eb223333 attempt=1",
+    "BUILD report_id=4f534c39-457b-4f66-8311-e167eb223333 attempt=2",
+    "BUILD report_id=4f534c39-457b-4f66-8311-e167eb223333 attempt=3",
+    "FINAL FAILURE report_id=4f534c39-457b-4f66-8311-e167eb223333"
+  ],
+  "missing_topic_status": 400
+}
+```
+Retries are safe here because the build step has no external side effects; real email/charge jobs require idempotency to prevent duplicates.

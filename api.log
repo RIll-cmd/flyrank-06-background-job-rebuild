@@ -1,8 +1,26 @@
-INFO:     127.0.0.1:60583 - "PUT /api/inngest HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60591 - "POST /reports HTTP/1.1" 202 Accepted
-INFO:     127.0.0.1:60592 - "POST /api/inngest?fnId=report-api-make-report&stepId=step HTTP/1.1" 206 Partial Content
-INFO:     127.0.0.1:51559 - "PUT /api/inngest HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62041 - "PUT /api/inngest HTTP/1.1" 200 OK
-BUILD report_id=56a3282c-5889-4b88-b240-b3ca8a116187 attempt=1
-INFO:     127.0.0.1:62051 - "POST /api/inngest?fnId=report-api-make-report&stepId=step HTTP/1.1" 206 Partial Content
-INFO:     127.0.0.1:62062 - "POST /api/inngest?fnId=report-api-make-report&stepId=step HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61487 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61489 - "POST /reports HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:61490 - "POST /reports HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:61494 - "POST /api/inngest?fnId=report-api-make-report&stepId=step HTTP/1.1" 206 Partial Content
+INFO:     127.0.0.1:61506 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61529 - "PUT /api/inngest HTTP/1.1" 200 OK
+BUILD report_id=4f534c39-457b-4f66-8311-e167eb223333 attempt=1
+INFO:     127.0.0.1:61555 - "POST /api/inngest?fnId=report-api-make-report&stepId=step HTTP/1.1" 206 Partial Content
+BUILD report_id=4f534c39-457b-4f66-8311-e167eb223333 attempt=2
+INFO:     127.0.0.1:61556 - "POST /api/inngest?fnId=report-api-make-report&stepId=step HTTP/1.1" 206 Partial Content
+BUILD report_id=4f534c39-457b-4f66-8311-e167eb223333 attempt=3
+INFO:     127.0.0.1:61557 - "POST /api/inngest?fnId=report-api-make-report&stepId=step HTTP/1.1" 206 Partial Content
+INFO:     127.0.0.1:61558 - "POST /api/inngest?fnId=report-api-make-report&stepId=step HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:61561 - "PUT /api/inngest HTTP/1.1" 200 OK
+FINAL FAILURE report_id=4f534c39-457b-4f66-8311-e167eb223333
+INFO:     127.0.0.1:61563 - "POST /api/inngest?fnId=report-api-make-report-failure&stepId=step HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61567 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60535 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60539 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60542 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52147 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52177 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52203 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52227 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64496 - "PUT /api/inngest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64498 - "GET /reports/4f534c39-457b-4f66-8311-e167eb223333 HTTP/1.1" 200 OK

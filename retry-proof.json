@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-11-05T07:37:25.067889+00:00",
+  "failed_poll": {
+    "id": "4f534c39-457b-4f66-8311-e167eb223333",
+    "status": "failed",
+    "error": "Report failed after three attempts"
+  },
+  "attempt_log": [
+    "BUILD report_id=4f534c39-457b-4f66-8311-e167eb223333 attempt=1",
+    "BUILD report_id=4f534c39-457b-4f66-8311-e167eb223333 attempt=2",
+    "BUILD report_id=4f534c39-457b-4f66-8311-e167eb223333 attempt=3",
+    "FINAL FAILURE report_id=4f534c39-457b-4f66-8311-e167eb223333"
+  ],
+  "missing_topic_status": 400
+}
