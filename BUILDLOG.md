@@ -54,3 +54,11 @@ Live POST topic fail, then GET status; missing topic POST returned 400. SDK retr
 }
 ```
 Retries are safe here because the build step has no external side effects; real email/charge jobs require idempotency to prevent duplicates.
+
+## Stage 4
+Real cron ticks from * * * * * (not manually invoked):
+```text
+Heartbeat at 2026-11-05T07:39:00.027471+00:00: {'pending': 0, 'done': 0, 'failed': 0}
+Heartbeat at 2026-11-05T07:40:00.032986+00:00: {'pending': 0, 'done': 0, 'failed': 0}
+```
+Observed interval 60.005515 seconds. Each summary counts pending/done/failed. Daily 08:00 UTC: `0 8 * * *`; Sunday 22:00 UTC: `0 22 * * 0`. Dashboard confirmed completed heartbeat runs.

@@ -35,7 +35,13 @@ async def make_report(ctx: inngest.Context):
         return result
     return await ctx.step.run('build-report', build)
 
-inngest.fast_api.serve(app, client, [say_hello, make_report])
+@client.create_function(fn_id='heartbeat', trigger=inngest.TriggerCron(cron='* * * * *'))
+async def heartbeat(ctx: inngest.Context):
+    summary = {status: sum(item['status'] == status for item in reports.values()) for status in ['pending', 'done', 'failed']}
+    print(f'Heartbeat at {datetime.datetime.now(datetime.timezone.utc).isoformat()}: {summary}', flush=True)
+    return summary
+
+inngest.fast_api.serve(app, client, [say_hello, make_report, heartbeat])
 
 @app.get('/health')
 def health():

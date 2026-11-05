@@ -1,0 +1,7 @@
+{
+  "lines": [
+    "Heartbeat at 2026-11-05T07:39:00.027471+00:00: {'pending': 0, 'done': 0, 'failed': 0}",
+    "Heartbeat at 2026-11-05T07:40:00.032986+00:00: {'pending': 0, 'done': 0, 'failed': 0}"
+  ],
+  "interval_seconds": 60.005515
+}
