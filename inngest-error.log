@@ -12,3 +12,7 @@
 {"time":"2026-11-05T07:32:28.5093522Z","level":"INFO","msg":"Executor started in assignedQueueShard Mode","queue_shard":"default"}
 {"time":"2026-11-05T07:32:28.5133641Z","level":"INFO","msg":"service starting","caller":"connect-gateway","service":"connect-gateway"}
 {"time":"2026-11-05T07:32:28.5312901Z","level":"INFO","msg":"subscribing to events","topic":"events"}
+{"time":"2026-11-05T07:33:10.8571282Z","level":"INFO","msg":"publishing event","caller":"api","event_name":"test/hello","internal_id":"01M6NA0FJ9RA9RK4WQ1EVZXY40","external_id":"01M6NA0FJ9RA9RK4WQ1EVZXY40","event":{"id":"01M6NA0FJ9RA9RK4WQ1EVZXY40","name":"test/hello","data":{},"ts":1793863990857}}
+{"time":"2026-11-05T07:33:11.0973464Z","level":"INFO","msg":"received event","event":"test/hello","event_id":"01M6NA0FJ9RA9RK4WQ1EVZXY40","internal_id":"01M6NA0FJ9RA9RK4WQ1EVZXY40"}
+{"time":"2026-11-05T07:33:11.0982499Z","level":"INFO","msg":"initializing fn","event":"test/hello","event_id":"01M6NA0FJ9RA9RK4WQ1EVZXY40","internal_id":"01M6NA0FJ9RA9RK4WQ1EVZXY40","function":"say-hello","function_id":"8836d247-0e03-5e8a-adae-f0ee1e9f890c"}
+{"time":"2026-11-05T07:33:16.3539083Z","level":"INFO","msg":"received event","event":"inngest/function.finished","event_id":"01M6NA0MQQD9NVF5ANW9BAY7BQ","internal_id":"01M6NA0MQQNXKG67Q5M4606FG3"}

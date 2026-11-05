@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-11-05T07:35:18.215951+00:00",
+  "post_status": 202,
+  "response_seconds": 0.021,
+  "response": {
+    "id": "cc8ef43f-26fd-4cda-919f-803aa464752d",
+    "status": "pending"
+  },
+  "pending_poll": {
+    "id": "cc8ef43f-26fd-4cda-919f-803aa464752d",
+    "status": "pending"
+  },
+  "later_poll": {
+    "id": "cc8ef43f-26fd-4cda-919f-803aa464752d",
+    "status": "done",
+    "result": "Report about cats"
+  },
+  "unknown_status": 404
+}
